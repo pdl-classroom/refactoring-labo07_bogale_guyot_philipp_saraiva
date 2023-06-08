@@ -4,11 +4,11 @@ public class Product {
 
     public static final int SIZE_NOT_APPLICABLE = -1;
 
-    private String code;
-    private int color;
-    private int size;
-    private double price;
-    private String currency;
+    private final String code;
+    private final int color;
+    private final int size;
+    private final double price;
+    private final String currency;
 
     public Product(String code, int color, int size, double price, String currency) {
         this.code = code;
