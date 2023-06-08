@@ -19,4 +19,10 @@ public class Orders {
         return orders.get(i);
     }
 
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "orders=" + orders +
+                '}';
+    }
 }
