@@ -1,19 +1,21 @@
 package ch.heigvd.pdl.refactoring;
 
+import ch.heigvd.pdl.refactoring.utils.*;
+
 public class Product {
 
-    public static final int SIZE_NOT_APPLICABLE = -1;
+    public static final Size SIZE_NOT_APPLICABLE = Size.INVALID_SIZE;
 
     private final String code;
-    private final int color;
-    private final int size;
+    private final Color color;
+    private final Size size;
     private final double price;
     private final String currency;
 
-    public Product(String code, int color, int size, double price, String currency) {
+    public Product(String code, Color color, Size size, double price, String currency) {
         this.code = code;
         this.color = color;
-        this.size = size;
+        this.size  = size;
         this.price = price;
         this.currency = currency;
     }
@@ -22,11 +24,11 @@ public class Product {
         return code;
     }
 
-    public int getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public int getSize() {
+    public Size getSize() {
         return size;
     }
 
