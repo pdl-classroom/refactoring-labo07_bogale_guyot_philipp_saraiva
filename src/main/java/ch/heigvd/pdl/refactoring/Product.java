@@ -39,4 +39,19 @@ public class Product {
     public String getCurrency() {
         return currency;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("{");
+        sb.append("\"code\": \"").append(code).append("\", ");
+        sb.append("\"color\": \"").append(color).append("\", ");
+
+        if (getSize() != Product.SIZE_NOT_APPLICABLE) {
+            sb.append("\"size\": \"").append(size).append("\", ");
+        }
+
+        sb.append("\"price\": ").append(price).append(", ");
+        sb.append("\"currency\": \"").append(currency).append("\"}");
+        return sb.toString();
+    }
 }
