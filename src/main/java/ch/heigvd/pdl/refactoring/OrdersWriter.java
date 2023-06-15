@@ -1,7 +1,5 @@
 package ch.heigvd.pdl.refactoring;
 
-import ch.heigvd.pdl.refactoring.utils.*;
-
 public class OrdersWriter {
 
    private final Orders orders;
