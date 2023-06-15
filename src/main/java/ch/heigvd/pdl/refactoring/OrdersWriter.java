@@ -62,11 +62,11 @@ public class OrdersWriter {
       return sb.append("]}").toString();
    }
 
-   private int getSizeFor(Product product) {
-      return product.getSize();
+   private String getSizeFor(Product product) {
+      return product.toString();
    }
 
-   private int getColorFor(Product product) {
-      return product.getColor();
+   private String getColorFor(Product product) {
+      return product.toString();
    }
 }

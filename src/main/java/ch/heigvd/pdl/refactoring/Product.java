@@ -2,12 +2,9 @@ package ch.heigvd.pdl.refactoring;
 
 import ch.heigvd.pdl.refactoring.utils.*;
 
-import static ch.heigvd.pdl.refactoring.utils.Color.getColorById;
-import static ch.heigvd.pdl.refactoring.utils.Size.getSizeById;
-
 public class Product {
 
-    public static final int SIZE_NOT_APPLICABLE = Size.INVALID_SIZE.getSizeId();
+    public static final Size SIZE_NOT_APPLICABLE = Size.INVALID_SIZE;
 
     private final String code;
     private final Color color;
@@ -15,10 +12,10 @@ public class Product {
     private final double price;
     private final String currency;
 
-    public Product(String code, int color, int size, double price, String currency) {
+    public Product(String code, Color color, Size size, double price, String currency) {
         this.code = code;
-        this.color = getColorById(color);
-        this.size  = getSizeById(size);
+        this.color = color;
+        this.size  = size;
         this.price = price;
         this.currency = currency;
     }
@@ -27,12 +24,12 @@ public class Product {
         return code;
     }
 
-    public int getColor() {
-        return color.getColorId();
+    public Color getColor() {
+        return color;
     }
 
-    public int getSize() {
-        return size.getSizeId();
+    public Size getSize() {
+        return size;
     }
 
     public double getPrice() {
