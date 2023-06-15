@@ -17,6 +17,7 @@ public class OrdersWriter {
             sb.append(", ");
       }
 
+
       if (orders.getOrdersCount() > 0) {
             sb.delete(sb.length() - 2, sb.length());
       }
