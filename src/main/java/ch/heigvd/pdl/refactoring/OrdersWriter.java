@@ -63,10 +63,10 @@ public class OrdersWriter {
    }
 
    private String getSizeFor(Product product) {
-      return product.toString();
+      return product.getSize().toString();
    }
 
    private String getColorFor(Product product) {
-      return product.toString();
+      return product.getColor().toString();
    }
 }
