@@ -35,11 +35,7 @@ public class Order {
 
         for (int j = 0; j < getProductsCount(); j++) {
             Product product = getProduct(j);
-            sb.append(product.toString()).append(", ");
-        }
-
-        if (getProductsCount() > 0) {
-            sb.delete(sb.length() - 2, sb.length());
+            sb.append(product).append(", ");
         }
 
         sb.append("]}");
